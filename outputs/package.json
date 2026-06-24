@@ -1,0 +1,14 @@
+{
+  "name": "havenly-hostel-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Complete smart hostel and boarding management platform",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/api.test.js",
+    "reset-data": "node scripts/reset-data.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d2d">
+  <title>Sign in — Havenly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+  <main class="login-shell">
+    <section class="story-panel">
+      <div class="brand"><span class="brand-mark"><i></i><i></i><i></i></span><strong>Havenly</strong></div>
+      <div class="story-copy">
+        <p class="eyebrow">SMART ACCOMMODATION</p>
+        <h1>A calmer way to run student living.</h1>
+        <p>Rooms, residents, maintenance, visitors, payments, and notices—connected in one dependable platform.</p>
+      </div>
+      <div class="story-stats">
+        <div><strong>320</strong><span>Managed beds</span></div>
+        <div><strong>89%</strong><span>Occupancy</span></div>
+        <div><strong>24/7</strong><span>Resident access</span></div>
+      </div>
+    </section>
+    <section class="form-panel">
+      <form id="loginForm">
+        <div class="mobile-brand"><span class="brand-mark"><i></i><i></i><i></i></span><strong>Havenly</strong></div>
+        <p class="eyebrow">WELCOME BACK</p>
+        <h2>Sign in to your account</h2>
+        <p class="intro">Use your hostel account to continue.</p>
+        <label>Email address<input id="email" type="email" autocomplete="username" required value="admin@havenly.lk"></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required value="admin123"></label>
+        <div class="form-row"><label class="remember"><input type="checkbox" checked> Remember me</label><button type="button" class="link-btn">Forgot password?</button></div>
+        <p class="error" id="loginError" role="alert"></p>
+        <button class="submit-btn" type="submit"><span>Sign in</span><i>→</i></button>
+        <div class="demo-box">
+          <strong>Demo accounts</strong>
+          <button type="button" data-demo="admin"><span>Administrator</span><small>admin@havenly.lk / admin123</small></button>
+          <button type="button" data-demo="student"><span>Student mobile app</span><small>student@havenly.lk / student123</small></button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123231">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Havenly student accommodation mobile application">
+  <title>Havenly Student</title>
+  <link rel="manifest" href="/student/manifest.webmanifest">
+  <link rel="icon" href="/student/icon.svg">
+  <link rel="apple-touch-icon" href="/student/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/student/styles.css">
+</head>
+<body>
+  <div class="mobile-app">
+    <header class="mobile-header">
+      <div class="mobile-brand"><span class="brand-mark"><i></i><i></i><i></i></span><strong>Havenly</strong></div>
+      <button class="notification-button" id="notificationButton" aria-label="Notifications">♢<span id="notificationCount"></span></button>
+    </header>
+
+    <main>
+      <section class="screen active" id="homeScreen">
+        <div class="greeting"><p id="todayLabel">Wednesday, 24 June</p><h1>Hello, <span id="firstName">Ayesha</span> 👋</h1><span>Everything you need for hostel life.</span></div>
+        <article class="room-pass">
+          <div class="pass-top"><div><small>YOUR ROOM</small><strong id="homeRoom">A-101</strong><span id="homeBlock">Block A · Floor 1</span></div><div class="room-icon">⌂</div></div>
+          <div class="pass-footer"><span><i></i> Active resident</span><button data-screen="roomScreen">View details →</button></div>
+        </article>
+        <div class="section-title"><div><h2>Quick actions</h2><p>What would you like to do?</p></div></div>
+        <div class="quick-actions">
+          <button data-sheet="complaintSheet"><span class="quick-icon coral">⌁</span><strong>Report issue</strong><small>Maintenance</small></button>
+          <button data-sheet="visitorSheet"><span class="quick-icon blue">♙</span><strong>Add visitor</strong><small>Request entry</small></button>
+          <button data-screen="paymentsScreen"><span class="quick-icon gold">▣</span><strong>Fee status</strong><small>View payments</small></button>
+          <button data-screen="noticesScreen"><span class="quick-icon violet">◇</span><strong>Notices</strong><small>Announcements</small></button>
+        </div>
+        <div class="section-title"><div><h2>Latest notice</h2><p>Stay updated</p></div><button data-screen="noticesScreen">View all</button></div>
+        <div id="latestNotice"></div>
+        <div class="section-title"><div><h2>My requests</h2><p>Recent maintenance activity</p></div><button data-screen="requestsScreen">View all</button></div>
+        <div id="homeRequests" class="compact-list"></div>
+      </section>
+
+      <section class="screen" id="roomScreen">
+        <div class="screen-heading"><button class="back-button" data-screen="homeScreen">←</button><div><h1>My room</h1><p>Accommodation details</p></div></div>
+        <article class="room-hero"><small>ASSIGNED ROOM</small><strong id="roomNumber">A-101</strong><span id="roomLocation">Block A · Floor 1</span></article>
+        <div class="detail-card"><h2>Room information</h2><div class="detail-grid"><div><small>Room type</small><strong id="roomType">4-bed room</strong></div><div><small>Occupancy</small><strong id="roomOccupancy">2 of 4</strong></div><div><small>Check-in</small><strong id="checkInDate">1 Sep 2025</strong></div><div><small>Status</small><strong class="green-text">Active</strong></div></div></div>
+        <div class="detail-card"><h2>Amenities</h2><div class="chips" id="amenities"></div></div>
+        <div class="detail-card"><h2>Emergency contacts</h2><a href="tel:+94112345678"><span>Warden office</span><strong>+94 11 234 5678</strong></a><a href="tel:1990"><span>Ambulance</span><strong>1990</strong></a></div>
+      </section>
+
+      <section class="screen" id="requestsScreen">
+        <div class="screen-heading"><div><h1>Maintenance</h1><p>Track your requests</p></div><button class="round-add" data-sheet="complaintSheet">+</button></div>
+        <div class="filter-pills" id="requestFilters"><button class="active" data-filter="all">All</button><button data-filter="Pending">Pending</button><button data-filter="In progress">In progress</button><button data-filter="Resolved">Resolved</button></div>
+        <div id="requestList" class="card-list"></div>
+      </section>
+
+      <section class="screen" id="paymentsScreen">
+        <div class="screen-heading"><div><h1>Payments</h1><p>Your accommodation fees</p></div></div>
+        <article class="payment-summary"><small>CURRENT BALANCE</small><strong id="currentBalance">LKR 0</strong><span id="paymentMessage">You're all caught up.</span></article>
+        <div class="section-title"><div><h2>Payment history</h2><p>All fee records</p></div></div>
+        <div id="paymentList" class="card-list"></div>
+        <div class="info-banner">Payments are recorded by hostel administration. Contact the warden if a recent payment is not shown.</div>
+      </section>
+
+      <section class="screen" id="noticesScreen">
+        <div class="screen-heading"><div><h1>Notices</h1><p>Updates from management</p></div></div>
+        <div class="filter-pills" id="noticeFilters"><button class="active" data-filter="all">All</button><button data-filter="Important">Important</button><button data-filter="Event">Events</button><button data-filter="Maintenance">Maintenance</button></div>
+        <div id="noticeList" class="card-list"></div>
+      </section>
+
+      <section class="screen" id="profileScreen">
+        <div class="profile-hero"><div class="profile-avatar" id="profileAvatar">AP</div><h1 id="profileName">Ayesha Perera</h1><p id="profileId">STU-2024-0182</p></div>
+        <div class="profile-list">
+          <button data-screen="roomScreen"><span>⌂</span><div><strong>Accommodation</strong><small>Room and residence information</small></div><i>›</i></button>
+          <button data-sheet="visitorHistorySheet"><span>♙</span><div><strong>My visitors</strong><small>Requests and approval status</small></div><i>›</i></button>
+          <button id="installButton" hidden><span>⇩</span><div><strong>Install Havenly</strong><small>Add this app to your home screen</small></div><i>›</i></button>
+          <button id="logoutButton"><span>↗</span><div><strong>Sign out</strong><small>End this session securely</small></div><i>›</i></button>
+        </div>
+        <p class="version">Havenly Student · Version 1.0.0</p>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Student navigation">
+      <button class="active" data-screen="homeScreen"><span>⌂</span><small>Home</small></button>
+      <button data-screen="requestsScreen"><span>⌁</span><small>Requests</small></button>
+      <button data-screen="paymentsScreen"><span>▣</span><small>Payments</small></button>
+      <button data-screen="noticesScreen"><span>◇</span><small>Notices</small></button>
+      <button data-screen="profileScreen"><span>○</span><small>Profile</small></button>
+    </nav>
+  </div>
+
+  <div class="sheet-backdrop" id="sheetBackdrop">
+    <section class="sheet" id="complaintSheet">
+      <div class="sheet-handle"></div><div class="sheet-head"><div><small>MAINTENANCE</small><h2>Report an issue</h2></div><button class="close-sheet">×</button></div>
+      <form id="complaintForm">
+        <label>Issue title<input name="title" required placeholder="e.g. Ceiling fan making noise"></label>
+        <label>Category<select name="category"><option>Electrical</option><option>Plumbing</option><option>Furniture</option><option>Cleaning</option><option>Internet</option><option>General</option></select></label>
+        <label>Priority<select name="priority"><option>Low</option><option selected>Medium</option><option>High</option></select></label>
+        <label>Description<textarea name="description" required placeholder="Tell us what happened and where..."></textarea></label>
+        <label class="upload-label">Optional photo<input id="complaintImage" type="file" accept="image/*"><span id="uploadText">Tap to choose an image</span></label>
+        <button class="sheet-submit" type="submit">Submit request</button>
+      </form>
+    </section>
+    <section class="sheet" id="visitorSheet">
+      <div class="sheet-handle"></div><div class="sheet-head"><div><small>VISITORS</small><h2>Request visitor entry</h2></div><button class="close-sheet">×</button></div>
+      <form id="visitorForm">
+        <label>Visitor name<input name="visitorName" required placeholder="Full name"></label>
+        <label>Phone number<input name="visitorPhone" type="tel" placeholder="+94 77 000 0000"></label>
+        <label>Relationship<select name="relationship"><option>Parent</option><option>Sibling</option><option>Friend</option><option>Guardian</option><option>Other</option></select></label>
+        <label>NIC / passport number<input name="idNumber" placeholder="Identification number"></label>
+        <label>Expected date and time<input name="visitDate" type="datetime-local" required></label>
+        <label>Purpose<textarea name="purpose" placeholder="Short reason for the visit"></textarea></label>
+        <button class="sheet-submit" type="submit">Send for approval</button>
+      </form>
+    </section>
+    <section class="sheet" id="visitorHistorySheet">
+      <div class="sheet-handle"></div><div class="sheet-head"><div><small>VISITORS</small><h2>My visitor requests</h2></div><button class="close-sheet">×</button></div>
+      <div id="visitorHistory" class="card-list"></div>
+    </section>
+    <section class="sheet" id="notificationsSheet">
+      <div class="sheet-handle"></div><div class="sheet-head"><div><small>UPDATES</small><h2>Notifications</h2></div><button class="close-sheet">×</button></div>
+      <div id="notificationList" class="card-list"></div>
+    </section>
+  </div>
+  <div class="mobile-toast" id="mobileToast"></div>
+  <script src="/student/app.js"></script>
+</body>
+</html>

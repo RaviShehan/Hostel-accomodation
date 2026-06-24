@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "name": "Campus Residence Colombo",
+    "address": "42 University Road, Colombo 07, Sri Lanka",
+    "phone": "+94 11 234 5678",
+    "email": "warden@campusresidence.lk",
+    "visitorPolicyEnabled": true,
+    "currency": "LKR"
+  },
+  "users": [
+    {
+      "id": "USR-ADMIN-001",
+      "name": "Nadeesha Abeysekara",
+      "email": "admin@havenly.lk",
+      "phone": "+94 77 111 1000",
+      "role": "admin",
+      "active": true,
+      "password": "admin123"
+    },
+    {
+      "id": "USR-WARDEN-001",
+      "name": "Saman Wickramasinghe",
+      "email": "warden@havenly.lk",
+      "phone": "+94 77 111 2000",
+      "role": "warden",
+      "active": true,
+      "password": "warden123"
+    },
+    {
+      "id": "USR-STUDENT-001",
+      "name": "Ayesha Perera",
+      "email": "student@havenly.lk",
+      "phone": "+94 77 842 1930",
+      "role": "student",
+      "active": true,
+      "password": "student123"
+    },
+    {
+      "id": "USR-STUDENT-002",
+      "name": "Kasun Mendis",
+      "email": "kasun@havenly.lk",
+      "phone": "+94 71 325 6812",
+      "role": "student",
+      "active": true,
+      "password": "student123"
+    },
+    {
+      "id": "USR-STUDENT-003",
+      "name": "Ruwan Silva",
+      "email": "ruwan@havenly.lk",
+      "phone": "+94 76 119 4875",
+      "role": "student",
+      "active": true,
+      "password": "student123"
+    },
+    {
+      "id": "USR-STUDENT-004",
+      "name": "Nimali Jayasinghe",
+      "email": "nimali@havenly.lk",
+      "phone": "+94 75 631 9082",
+      "role": "student",
+      "active": true,
+      "password": "student123"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "ROOM-A101",
+      "number": "A-101",
+      "block": "Block A",
+      "floor": 1,
+      "type": "4-bed room",
+      "capacity": 4,
+      "occupants": ["RES-001", "RES-004"],
+      "status": "Available",
+      "amenities": ["Wi-Fi", "Study desk", "Wardrobe"]
+    },
+    {
+      "id": "ROOM-A204",
+      "number": "A-204",
+      "block": "Block A",
+      "floor": 2,
+      "type": "4-bed room",
+      "capacity": 4,
+      "occupants": [],
+      "status": "Available",
+      "amenities": ["Wi-Fi", "Balcony", "Attached bathroom"]
+    },
+    {
+      "id": "ROOM-B108",
+      "number": "B-108",
+      "block": "Block B",
+      "floor": 1,
+      "type": "2-bed room",
+      "capacity": 2,
+      "occupants": ["RES-002"],
+      "status": "Available",
+      "amenities": ["Wi-Fi", "Study desk"]
+    },
+    {
+      "id": "ROOM-B202",
+      "number": "B-202",
+      "block": "Block B",
+      "floor": 2,
+      "type": "4-bed room",
+      "capacity": 4,
+      "occupants": [],
+      "status": "Available",
+      "amenities": ["Wi-Fi", "Study desk"]
+    },
+    {
+      "id": "ROOM-C312",
+      "number": "C-312",
+      "block": "Block C",
+      "floor": 3,
+      "type": "4-bed room",
+      "capacity": 4,
+      "occupants": ["RES-003"],
+      "status": "Available",
+      "amenities": ["Wi-Fi", "Air conditioning"]
+    },
+    {
+      "id": "ROOM-C108",
+      "number": "C-108",
+      "block": "Block C",
+      "floor": 1,
+      "type": "2-bed room",
+      "capacity": 2,
+      "occupants": [],
+      "status": "Maintenance",
+      "amenities": ["Wi-Fi"]
+    }
+  ],
+  "residents": [
+    {
+      "id": "RES-001",
+      "userId": "USR-STUDENT-001",
+      "studentId": "STU-2024-0182",
+      "faculty": "Computer Science",
+      "year": "Year 2",
+      "guardianName": "Malini Perera",
+      "guardianPhone": "+94 77 555 0182",
+      "roomId": "ROOM-A101",
+      "block": "Block A",
+      "checkInDate": "2025-09-01",
+      "status": "Active"
+    },
+    {
+      "id": "RES-002",
+      "userId": "USR-STUDENT-002",
+      "studentId": "STU-2023-0441",
+      "faculty": "Engineering",
+      "year": "Year 3",
+      "guardianName": "Sunil Mendis",
+      "guardianPhone": "+94 71 555 0441",
+      "roomId": "ROOM-B108",
+      "block": "Block B",
+      "checkInDate": "2024-09-01",
+      "status": "Active"
+    },
+    {
+      "id": "RES-003",
+      "userId": "USR-STUDENT-003",
+      "studentId": "STU-2025-0107",
+      "faculty": "Business",
+      "year": "Year 1",
+      "guardianName": "Kumari Silva",
+      "guardianPhone": "+94 76 555 0107",
+      "roomId": "ROOM-C312",
+      "block": "Block C",
+      "checkInDate": "2025-09-01",
+      "status": "Active"
+    },
+    {
+      "id": "RES-004",
+      "userId": "USR-STUDENT-004",
+      "studentId": "STU-2022-0316",
+      "faculty": "Medicine",
+      "year": "Year 4",
+      "guardianName": "Ajith Jayasinghe",
+      "guardianPhone": "+94 75 555 0316",
+      "roomId": "ROOM-A101",
+      "block": "Block A",
+      "checkInDate": "2023-09-01",
+      "status": "Active"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "CMP-1428",
+      "residentId": "RES-002",
+      "roomId": "ROOM-B108",
+      "title": "Water leak under washbasin",
+      "description": "Continuous dripping has caused water to collect below the sink.",
+      "category": "Plumbing",
+      "priority": "High",
+      "status": "In progress",
+      "image": null,
+      "createdAt": "2026-06-24T02:18:00.000Z",
+      "updatedAt": "2026-06-24T03:10:00.000Z",
+      "history": [
+        {"status": "Pending", "at": "2026-06-24T02:18:00.000Z", "by": "USR-STUDENT-002"},
+        {"status": "In progress", "at": "2026-06-24T03:10:00.000Z", "by": "USR-WARDEN-001"}
+      ]
+    },
+    {
+      "id": "CMP-1427",
+      "residentId": "RES-001",
+      "roomId": "ROOM-A101",
+      "title": "Ceiling fan making noise",
+      "description": "The ceiling fan makes a loud rattling noise at medium and high speed.",
+      "category": "Electrical",
+      "priority": "Medium",
+      "status": "Pending",
+      "image": null,
+      "createdAt": "2026-06-23T12:30:00.000Z",
+      "updatedAt": "2026-06-23T12:30:00.000Z",
+      "history": [
+        {"status": "Pending", "at": "2026-06-23T12:30:00.000Z", "by": "USR-STUDENT-001"}
+      ]
+    },
+    {
+      "id": "CMP-1426",
+      "residentId": "RES-003",
+      "roomId": "ROOM-C312",
+      "title": "Study light not working",
+      "description": "The desk lamp stopped working after a power interruption.",
+      "category": "Electrical",
+      "priority": "Low",
+      "status": "Resolved",
+      "image": null,
+      "createdAt": "2026-06-20T08:00:00.000Z",
+      "updatedAt": "2026-06-22T05:30:00.000Z",
+      "history": [
+        {"status": "Pending", "at": "2026-06-20T08:00:00.000Z", "by": "USR-STUDENT-003"},
+        {"status": "Resolved", "at": "2026-06-22T05:30:00.000Z", "by": "USR-WARDEN-001"}
+      ]
+    }
+  ],
+  "visitorRequests": [
+    {
+      "id": "VIS-1001",
+      "residentId": "RES-001",
+      "visitorName": "Malith Perera",
+      "visitorPhone": "+94 77 440 1111",
+      "relationship": "Brother",
+      "idNumber": "200012345678",
+      "visitDate": "2026-06-24T17:30:00.000Z",
+      "purpose": "Family visit",
+      "status": "Pending",
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "createdAt": "2026-06-23T10:00:00.000Z"
+    },
+    {
+      "id": "VIS-1002",
+      "residentId": "RES-002",
+      "visitorName": "Sajini Mendis",
+      "visitorPhone": "+94 71 440 2222",
+      "relationship": "Mother",
+      "idNumber": "745612345V",
+      "visitDate": "2026-06-24T15:00:00.000Z",
+      "purpose": "Deliver personal items",
+      "status": "Approved",
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "createdAt": "2026-06-22T10:00:00.000Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY-2026-06-001",
+      "residentId": "RES-001",
+      "amount": 16500,
+      "period": "2026-06",
+      "dueDate": "2026-06-05",
+      "paidAt": "2026-06-03T06:20:00.000Z",
+      "status": "Paid",
+      "reference": "BANK-884102"
+    },
+    {
+      "id": "PAY-2026-06-002",
+      "residentId": "RES-002",
+      "amount": 16500,
+      "period": "2026-06",
+      "dueDate": "2026-06-05",
+      "paidAt": null,
+      "status": "Overdue",
+      "reference": ""
+    },
+    {
+      "id": "PAY-2026-06-003",
+      "residentId": "RES-003",
+      "amount": 16500,
+      "period": "2026-06",
+      "dueDate": "2026-06-05",
+      "paidAt": null,
+      "status": "Pending",
+      "reference": ""
+    },
+    {
+      "id": "PAY-2026-06-004",
+      "residentId": "RES-004",
+      "amount": 16500,
+      "period": "2026-06",
+      "dueDate": "2026-06-05",
+      "paidAt": "2026-06-01T09:00:00.000Z",
+      "status": "Paid",
+      "reference": "BANK-771230"
+    }
+  ],
+  "notices": [
+    {
+      "id": "NTC-001",
+      "title": "Scheduled water interruption",
+      "message": "Water supply to Blocks A and B will be paused for maintenance from 10:00 AM to 1:00 PM tomorrow.",
+      "category": "Important",
+      "audience": "All residents",
+      "authorId": "USR-ADMIN-001",
+      "publishedAt": "2026-06-24T02:00:00.000Z",
+      "expiresAt": "2026-06-26T00:00:00.000Z",
+      "pinned": true
+    },
+    {
+      "id": "NTC-002",
+      "title": "Residents’ monthly meeting",
+      "message": "The monthly residents’ meeting will be held in the common hall this Friday at 6:30 PM.",
+      "category": "Event",
+      "audience": "All residents",
+      "authorId": "USR-WARDEN-001",
+      "publishedAt": "2026-06-23T08:00:00.000Z",
+      "expiresAt": null,
+      "pinned": false
+    },
+    {
+      "id": "NTC-003",
+      "title": "Wi-Fi upgrade — Block C",
+      "message": "Network equipment will be upgraded on Saturday. Brief interruptions may occur between 8:00 AM and noon.",
+      "category": "Maintenance",
+      "audience": "Block C",
+      "authorId": "USR-ADMIN-001",
+      "publishedAt": "2026-06-20T05:00:00.000Z",
+      "expiresAt": null,
+      "pinned": false
+    }
+  ],
+  "notifications": [
+    {
+      "id": "NOT-001",
+      "userId": "USR-STUDENT-001",
+      "title": "Scheduled water interruption",
+      "message": "Water supply to Blocks A and B will be paused tomorrow.",
+      "type": "notice",
+      "read": false,
+      "createdAt": "2026-06-24T02:00:00.000Z"
+    },
+    {
+      "id": "NOT-002",
+      "userId": "USR-STUDENT-001",
+      "title": "Visitor request received",
+      "message": "Your visitor request for Malith Perera is awaiting approval.",
+      "type": "visitor",
+      "read": false,
+      "createdAt": "2026-06-23T10:00:00.000Z"
+    }
+  ]
+}

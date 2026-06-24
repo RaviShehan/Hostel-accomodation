@@ -1,0 +1,17 @@
+{
+  "name": "Havenly Student",
+  "short_name": "Havenly",
+  "description": "Student accommodation companion for rooms, maintenance, fees, notices, and visitors.",
+  "start_url": "/student/",
+  "display": "standalone",
+  "background_color": "#f4f4ee",
+  "theme_color": "#123231",
+  "icons": [
+    {
+      "src": "/student/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
