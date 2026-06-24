@@ -1,6 +1,8 @@
 # Smart Hostel and Boarding Management Platform
 
-Complete student accommodation administration platform with:
+A centralized accommodation management system providing students and administrators with structured workflows for day-to-day hostel operations.
+
+The complete platform includes:
 
 - Administrator and warden web dashboard
 - Installable student mobile PWA
@@ -21,4 +23,3 @@ node server.js
 ```
 
 Open `http://localhost:4173`.
-
