@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: havenly-hostel-management
+    runtime: node
+    plan: free
+    region: singapore
+    rootDir: outputs
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 24.15.0
+

@@ -23,3 +23,12 @@ node server.js
 ```
 
 Open `http://localhost:4173`.
+
+## Interview-ready demo
+
+- Double-click `START-HAVENLY-DEMO.cmd` for a local offline-capable demonstration.
+- Use `RESET-HAVENLY-DEMO.cmd` to restore clean sample records.
+- Deploy the included `render.yaml` Blueprint for a public URL.
+- Follow the [interview presentation guide](outputs/docs/INTERVIEW-GUIDE.md).
+
+[Deploy to Render](https://render.com/deploy?repo=https://github.com/RaviShehan/Hostel-accomodation)

@@ -8,7 +8,9 @@ const crypto = require("node:crypto");
 const { URL } = require("node:url");
 
 const ROOT = __dirname;
-const DATA_DIR = path.join(ROOT, "data");
+const DATA_DIR = process.env.DATA_DIR
+  ? path.resolve(process.env.DATA_DIR)
+  : path.join(ROOT, "data");
 const DB_FILE = path.join(DATA_DIR, "db.json");
 const SEED_FILE = path.join(DATA_DIR, "seed.json");
 const PORT = Number(process.env.PORT || 4173);
@@ -171,6 +173,14 @@ function scopedRecords(db, resource, user) {
 async function apiHandler(req, res, url) {
   const method = req.method;
   const pathname = url.pathname;
+
+  if (method === "GET" && pathname === "/api/health") {
+    return sendJson(res, 200, {
+      status: "ok",
+      service: "havenly-hostel-management",
+      time: now()
+    });
+  }
 
   if (method === "POST" && pathname === "/api/auth/login") {
     const { email, password } = await parseBody(req);

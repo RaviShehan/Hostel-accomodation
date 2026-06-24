@@ -82,6 +82,18 @@ node tests/api.test.js
 - [REST API reference](docs/API.md)
 - [Workflow definitions](docs/WORKFLOWS.md)
 - [Demonstration guide](docs/DEMO.md)
+- [Interview presentation guide](docs/INTERVIEW-GUIDE.md)
+- [Deployment and long-term demo guide](docs/DEPLOYMENT.md)
+
+## One-click Windows demo
+
+From the repository root, double-click `START-HAVENLY-DEMO.cmd`. Keep the server window open while presenting.
+
+Use `RESET-HAVENLY-DEMO.cmd` before a rehearsal or interview to restore the original sample records.
+
+## Cloud deployment
+
+The repository includes a Render Blueprint. After signing in to Render, create a new Blueprint from this GitHub repository. See [Deployment and Long-Term Demo](docs/DEPLOYMENT.md).
 
 ## Production considerations
 

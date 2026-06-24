@@ -38,6 +38,10 @@ async function request(pathname, { token, method="GET", body }={}) {
     assert.match(await adminPage.text(),/Good morning, Nadeesha/);
     assert.match(await studentPage.text(),/Everything you need for hostel life/);
 
+    const health = await request("/api/health");
+    assert.equal(health.response.status,200);
+    assert.equal(health.data.status,"ok");
+
     const bad = await request("/api/auth/login",{method:"POST",body:{email:"admin@havenly.lk",password:"wrong"}});
     assert.equal(bad.response.status,401);
 
@@ -85,6 +89,7 @@ async function request(pathname, { token, method="GET", body }={}) {
     assert.ok(Array.isArray(notices.data));
 
     console.log("✓ Login, administrator, and student application delivery");
+    console.log("✓ Deployment health endpoint");
     console.log("✓ Authentication and invalid-login handling");
     console.log("✓ Role-based access control");
     console.log("✓ Student profile and room allocation");
